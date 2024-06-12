@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="govr" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="govr" />
+    <meta property="og:description" content="govr" />
+    <meta http-equiv="Permissions-Policy" content="autoplay=(self)" />
+  </head>
+  <style>
+    body {
+      font-family: serif;
+      background-color: black;
+    }
+    h1 {
+      width: 100%;
+      text-align: center;
+      color: white;
+    }
+    img {
+      animation: fadein 35s;
+      margin: auto;
+      display: block;
+    }
+    @keyframes fadein {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+  <body onkeypress="playAudio()" onclick="playAudio()">
+    <h1><em>"The Gang Govrs in 18 Mins"</em></h1>
+    <audio id="sunnyAudio" autoplay loop muted>
+      <source src="AlwaysSunny.mp3" type="audio/mp3" />
+    </audio>
+    <img src="./ty.jpg" alt="YungTyler" />
+  </body>
+  <script>
+    let audioPlaying = false;
+
+    const playAudio = () => {
+      if (!audioPlaying) {
+        audioPlaying = true;
+        var vAudio = document.getElementById("sunnyAudio");
+        vAudio.muted = false;
+        vAudio.play();
+      }
+    };
+  </script>
+</html>
